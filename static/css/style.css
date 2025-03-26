@@ -1,0 +1,24 @@
+/*Global*/
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Header*/
+header{
+    background-color: purple;
+}
+.header_container{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: white;
+}
+
+
+#Hlogo{
+    margin-right: 15%;
+}
