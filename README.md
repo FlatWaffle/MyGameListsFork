@@ -4,7 +4,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 
 ---
 
-## 🚀 Planned features
+## 🗒️ Planned features
 
 - **User Profiles**: Sign up, log in, and manage user profile.
 - **Game Lists**: Create and organize game list with statuses like "Playing," "Completed," or "Dropped."
