@@ -1,2 +1,13 @@
-# MyGameLists
-A site where users will be able to make a list of games they've played and save it to a personal list that can be shared. All game ratings will also come together and give a global score. Inspired by MyAnimeList.
+# 🎮 MyGameList
+
+A website inspired by [MyAnimeList](https://myanimelist.net), where users can create and share lists of games they've played. The platform collects user ratings together to provide global scores for each game. Users will also be able to make reviews for games in their lists.
+
+---
+
+## 🚀 Planned features
+
+- **User Profiles**: Sign up, log in, and manage user profile.
+- **Game Lists**: Create and organize game list with statuses like "Playing," "Completed," or "Dropped."
+- **Global Scores**: Collect game ratings from all users into a global score.
+- **Game Database**: Search for games using the IGDB or RAWG API (Havent decided yet) and get detailed information (title, genre, etc.).
+- **Reviews** Users will be able to make reviews for games in their list.
