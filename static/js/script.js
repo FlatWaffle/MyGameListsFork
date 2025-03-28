@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json()) // Get JSON
             .then(data => {
                 data.results.forEach(game => {
-                    gridContainer.innerHTML += `<div><img src="${game.background_image || 'idksomethingplaceholder.com'}"><h3>${game.name}</h3></div>`;
+                    // Add game to grid and uses placeholder image if no image is available
+                    gridContainer.innerHTML += `<div><img src="${game.background_image || 'https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}"><h3>${game.name}</h3></div>`;
                 });
             });
     }
