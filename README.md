@@ -14,7 +14,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 
 
 ## Current MVP progress
-- Main main list site✅
+- Main game list site✅
 - Raspberry Pi Mariadb database ✅
 - Host the website on Virtual Machine❌
 - Make user account creator❌
