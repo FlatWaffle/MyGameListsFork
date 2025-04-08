@@ -31,3 +31,39 @@ header{
 .grid img{
     width: 250px;
 }
+
+
+/* gamedetails page */	
+.headerGD{
+    
+}
+.containerGD {
+    display: flex;
+    gap: 20px;
+}
+.sidebarGD {
+    width: 250px;
+}
+.main-contentGD {
+    flex: 1;
+}
+.card img {
+    max-width: 100%;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+button {
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+select {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
