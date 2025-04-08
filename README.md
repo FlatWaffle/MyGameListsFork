@@ -11,3 +11,12 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 - **Global Scores**: Collect game ratings from all users into a global score.
 - **Game Database**: Search for games using the IGDB or RAWG API (Havent decided yet) and get detailed information (title, genre, etc.).
 - **Reviews** Users will be able to make reviews for games in their list.
+
+
+## Current MVP progress
+- Main game list site✅
+- Raspberry Pi Mariadb database ✅
+- Host the website on Virtual Machine❌
+- Make user account creator❌
+- Login sessions❌
+- Save games to userlist.❌
