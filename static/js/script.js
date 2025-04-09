@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_KEY = '6b9808e92cf04d038d16926869d56bad';
+    const API_KEY = '6b9808e92cf04d038d16926869d56bad'; //Will be hidden later
     const BASE_URL = `https://api.rawg.io/api/games?key=${API_KEY}`;
     const gridContainer = document.getElementById('imageGrid');
-
-    function fetchGameData() {
-        fetch(BASE_URL + '&page=1&page_size=20') // Fetch games from API and get first page with 20 games.
+    let CurrentPage = 1;
+    function fetchGameData(page) {
+        fetch(`${BASE_URL}&page=${page}&page_size=20`) // Fetch games from API and get page number from current page.
             .then(response => response.json()) // Convert response to JSON.
             .then(data => {
                 // Loop through games in api response
@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     }
+    //Load first page of games
+    fetchGameData(CurrentPage);
 
-    fetchGameData();   
+    //Load more pages
+    loadMoreBtn.addEventListener('click', function() {
+        CurrentPage++; // Increases currentpage by 1
+        fetchGameData(CurrentPage);
+    });
+    
 });
-
