@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_KEY = '6b9808e92cf04d038d16926869d56bad'; //Will be hidden later
+    const API_KEY = '6b9808e92cf04d038d16926869d56bad'; // Will be hidden later
     const BASE_URL = `https://api.rawg.io/api/games?key=${API_KEY}`;
     const gridContainer = document.getElementById('imageGrid');
     let CurrentPage = 1;
@@ -14,19 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     }
-ShowGameDetails = function(GameId) {
-    // Fetch game id from the game card that was clicked bcuz of the onclick event
-    // And store it in local storage in the SelectedGameId variable
-    localStorage.setItem('SelectedGameId', GameId);
-    window.location.href = 'GameDetails.html'; // Sends to GameDetails page
-}
-    //Load first page of games
+    ShowGameDetails = function(GameId) {
+        // Fetch game id from the game card that was clicked bcuz of the onclick event
+        // And store it in local storage in the SelectedGameId variable
+        localStorage.setItem('SelectedGameId', GameId);
+        window.location.href = 'GameDetails.html'; // Sends to GameDetails page
+    }
+    // Load first page of games
     fetchGameData(CurrentPage);
 
-    //Load more pages
+    // Load more pages
     loadMoreBtn.addEventListener('click', function() {
         CurrentPage++; // Increases currentpage by 1
         fetchGameData(CurrentPage);
     });
-    
 });
