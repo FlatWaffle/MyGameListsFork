@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 // Loop through games in api response
                 data.results.forEach(game => {
-                    // Add game to grid and uses placeholder image if no image is available
-                    gridContainer.innerHTML += `<div><img src="${game.background_image || 'https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}"><h3>${game.name}</h3></div>`;
+                    // Add game to grid and uses placeholder image if no image is available, also adds onclick event on the game card to show details with the game id.
+                    gridContainer.innerHTML += `<div class="game-card" onclick="ShowGameDetails(${game.id})"><img src="${game.background_image || 'https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}"><h3>${game.name}</h3></div>`;
                 });
             });
     }
+ShowGameDetails = function(GameId) {
+    // Fetch game id from the game card that was clicked bcuz of the onclick event
+    // And store it in local storage in the SelectedGameId variable
+    localStorage.setItem('SelectedGameId', GameId);
+    window.location.href = 'GameDetails.html'; // Sends to GameDetails page
+}
     //Load first page of games
     fetchGameData(CurrentPage);
 
