@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 let image = document.getElementById("GDimage");
                 // Set the image src to the games image from api
                 image.src = game.background_image;
+                // Set the game name to the games name from api
+                document.getElementById("GDname").innerHTML = game.name;
+                // Set the game summary to the games summary from api
+                document.getElementById("GDsummary").innerHTML = game.name;
+                document.getElementById("GDsummarytext").innerHTML = game.description;
             })
     }
 
