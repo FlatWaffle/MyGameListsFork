@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const BASE_URL = `https://api.rawg.io/api/games?key=${API_KEY}`;
     const gameId = localStorage.getItem('SelectedGameId');
     alert(gameId);
-
+    let image = document.getElementById("GDimage")
+    image.src = "https://cdn.pixabay.com/photo/2016/07/07/16/46/dice-1502706_640.jpg"
 
 });
