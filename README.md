@@ -3,6 +3,10 @@
 A website inspired by [MyAnimeList](https://myanimelist.net), where users can create and share lists of games they've played. The platform collects user ratings together to provide global scores for each game. Users will also be able to make reviews for games in their lists.
 
 ---
+# Table of contents 
+- [📝Develpment progress](#develpment-progress)
+- [📚Guides](#guides)
+
 # 📝Develpment progress 
 
 ## Planned features 🗒️
@@ -23,8 +27,18 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 ## Prio2
 - Host the website on Virtual Machine❌
 ---
-# 📚Guides 
+# 📚Guides (These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
 ## How to add a game to the list
 - Press on one of the games in the list
 - Choose game status
 - Press "Add to list"
+
+## How to create an account
+- Go to the register page
+- Fill in the form
+- Press "Register"
+
+## How to log in
+- Go to the login page
+- Fill in the form
+- Press "Login"
