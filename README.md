@@ -43,3 +43,5 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 - Go to the login page
 - Fill in the form
 - Press "Login"
+---
+# 

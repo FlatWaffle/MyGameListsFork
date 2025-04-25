@@ -4,12 +4,58 @@ import pymysql
 app = Flask(__name__)
 app.secret_key = 'skibidisecretkey'
 
-conn = pymysql.connect(
-    host='10.2.3.90', 
-    user='root', 
-    password='magnum asinum', 
-    database='mygamelistsdb')
+# Database connection
+def get_db_connection(): 
+    return pymysql.connect(
+        host='10.2.3.90', 
+        user='root', 
+        password='magnum asinum', 
+        database='mygamelistsdb'
+    )
 
+# Routes
+@app.route('/') # When someone visits the root url the index page will be rendered
+def index():
+    return render_template('index.html')
 
-    
+@app.route('/register', methods=['GET', 'POST']) # When someone visits the register url the register page will be loaded
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Insert new user
+        cursor.execute('INSERT INTO users (username, password) VALUES (%s, %s)', 
+                      (username, password))
+        conn.commit() # Commit the changes to the database
+        conn.close() # Close the connection
+        
+        return redirect(url_for('login')) # Sends the user to the login page
 
+@app.route('/login', methods=['GET', 'POST']) # When someone visits the login url the login page will be loaded
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        conn = get_db_connection()
+        cursor = conn.cursor()
+        
+        # Check if user exists
+        cursor.execute('SELECT * FROM users WHERE username = %s AND password = %s', # Check if user exists %s is a placeholder
+                      (username, password))
+        user = cursor.fetchone() # Fetch the user from the database
+        conn.close()
+        
+        if user: # If the user fech is not empty then the user is logged in and sent to the index page.
+            session['logged_in'] = True
+            session['username'] = username
+            return redirect(url_for('index')) 
+        
+    return render_template('login.html') # If the user was not logged in the login page reloads
+
+if _name_ == '__main__':
+    app.run(debug=True) # Run the app in debug mode
