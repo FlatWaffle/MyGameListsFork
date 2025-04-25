@@ -95,4 +95,8 @@ select {
     margin-bottom: 10px;
 }
 
+/* Makes cards interactable */
+.game-card {
+    cursor: pointer;
+}
 
