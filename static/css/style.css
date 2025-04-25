@@ -100,3 +100,6 @@ select {
     cursor: pointer;
 }
 
+.game-card:hover {
+    transform: scale(1.05);
+}
