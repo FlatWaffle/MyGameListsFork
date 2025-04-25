@@ -27,7 +27,8 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 ## Prio2
 - Host the website on Virtual Machine❌
 ---
-# 📚Guides (These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
+# 📚Guides 
+(These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
 ## How to add a game to the list
 - Press on one of the games in the list
 - Choose game status
