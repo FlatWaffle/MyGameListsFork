@@ -26,6 +26,9 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 - Save games to userlist.❌
 ## Prio2
 - Host the website on Virtual Machine❌
+
+## Universal design
+By law this website is designed to follow the universal design principles of Norway [§ 18](https://lovdata.no/lov/2017-06-16-51/§18)
 ---
 # 📚Guides 
 (These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
