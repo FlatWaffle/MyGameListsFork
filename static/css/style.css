@@ -10,14 +10,16 @@ a{
 }
 
 /*Header*/
-header{
-    background-color: purple;
+header {
+    background-color: #643EBB;
 }
-.header_container{
+
+.header_container {
     display: flex;
     align-items: center;
     gap: 25px;
     color: white;
+    padding: 1rem;
 }
 
 

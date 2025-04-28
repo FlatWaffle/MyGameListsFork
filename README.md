@@ -29,6 +29,8 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 
 ## Universal design
 By law this website is designed to follow the universal design principles of Norway [§ 18](https://lovdata.no/lov/2017-06-16-51/§18)
+- Color contrast are all at wecag AAA level tested through [WebAIM](https://webaim.org/resources/contrastchecker/)
+
 ---
 # 📚Guides 
 (These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
