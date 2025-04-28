@@ -22,7 +22,13 @@ header {
     padding: 1rem;
 }
 
-
+.header_container a {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+.header_container a:hover {
+    background-color: #ffffff1a;
+}
 
 /*Footer*/
 footer{
