@@ -97,15 +97,12 @@ footer{
 
 
 /* gamedetails page */	
-.headerGD{
-    
-}
 .containerGD {
     display: flex;
     gap: 20px;
 }
 .sidebarGD {
-    width: 250px;
+    width: 400px;
 }
 .main-contentGD {
     flex: 1;
