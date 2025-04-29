@@ -14,12 +14,19 @@ header {
     background-color: #643EBB;
 }
 
+#hlogo img{
+    width: 100px;
+
+}
 .header_container {
     display: flex;
     align-items: center;
     gap: 25px;
     color: white;
     padding: 1rem;
+}
+.header_container img {
+    width: 60px;
 }
 
 .header_container a {
@@ -135,4 +142,21 @@ select {
 
 .game-card:hover {
     transform: scale(1.05);
+}
+
+/* Stuff to make stuff reactive and look better on mobile */
+@media (max-width: 768px) {
+    .header_container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .containerGD {
+        flex-direction: column;
+    }
+    
+    .sidebarGD {
+        width: 100%;
+    }
 }
