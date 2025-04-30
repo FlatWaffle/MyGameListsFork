@@ -7,7 +7,7 @@ app.secret_key = 'skibidisecretkey'
 # Database connection
 def get_db_connection(): 
     return pymysql.connect(
-        host='10.2.3.90', 
+        host='10.2.3.56', 
         user='root', 
         password='magnum asinum', 
         database='mygamelistsdb'
@@ -57,5 +57,5 @@ def login():
         
     return render_template('login.html') # If the user was not logged in the login page reloads
 
-if _name_ == '__main__':
-    app.run(debug=True) # Run the app in debug mode
+if __name__ == '__main__':
+    app.run(debug=True)
