@@ -27,13 +27,14 @@ def register():
         conn = get_db_connection()
         cursor = conn.cursor()
         
-        # Insert new user
         cursor.execute('INSERT INTO users (username, password) VALUES (%s, %s)', 
                       (username, password))
         conn.commit() # Commit the changes to the database
         conn.close() # Close the connection
-        
-        return redirect(url_for('login')) # Sends the user to the login page
+        return redirect(url_for('login'))
+    
+    # This return is for GET requests
+    return render_template('register.html')
 
 @app.route('/login', methods=['GET', 'POST']) # When someone visits the login url the login page will be loaded
 def login():
@@ -43,7 +44,6 @@ def login():
         
         conn = get_db_connection()
         cursor = conn.cursor()
-        
         # Check if user exists
         cursor.execute('SELECT * FROM users WHERE username = %s AND password = %s', # Check if user exists %s is a placeholder
                       (username, password))
@@ -55,7 +55,10 @@ def login():
             session['username'] = username
             return redirect(url_for('index')) 
         
-    return render_template('login.html') # If the user was not logged in the login page reloads
+    # If the user was not logged in the login page reloads
+    return render_template('login.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/logout') # When someone visits the logout url they are logged out and sent to the index page
+def logout():
+    session.clear() # Clear the session
+    return redirect(url_for('index'))
