@@ -21,11 +21,11 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 ## Current MVP progress
 - Main game list site✅
 - Raspberry Pi Mariadb database ✅
-- Make user account creator❌
-- Login sessions❌
+- Make user account creator✅
+- Login sessions✅
 - Save games to userlist.❌
 ## Prio2
-- Host the website on Virtual Machine❌
+- Host the database on Virtual Machine✅
 
 ## Universal design
 By law this website is designed to follow the universal design principles of Norway [§ 18](https://lovdata.no/lov/2017-06-16-51/§18)
