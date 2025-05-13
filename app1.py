@@ -62,3 +62,10 @@ def login():
 def logout():
     session.clear() # Clear the session
     return redirect(url_for('index'))
+
+@app.route('/game-details')
+def game_details():
+    return render_template('GameDetails.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

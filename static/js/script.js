@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fetch game id from the game card that was clicked bcuz of the onclick event
         // And store it in local storage in the SelectedGameId variable
         localStorage.setItem('SelectedGameId', GameId);
-        window.location.href = 'GameDetails.html'; // Sends to GameDetails page
+        window.location.href = '/game-details';  // Changed from 'GameDetails.html' to '/game-details'
     }
     // Load first page of games
     fetchGameData(CurrentPage);
