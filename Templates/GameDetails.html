@@ -10,11 +10,16 @@
 <!-- header -->
 <header>
     <div class="header_container">
-        <h1 id="Hlogo">LOGO HERE</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
+        <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
+        <a href="{{ url_for('index') }}">Home</a>
+        {% if session.get('logged_in') %}
+            <span>In Session ({{ session.get('username') }})</span>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <span>Out of Session</span>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        {% endif %}
     </div>
 </header>
 
@@ -42,7 +47,7 @@
                 <button>Add to List</button>
             </div>
         </div>
-        
+        <main>
         <!-- Main content -->
         <div class="main-contentGD">
             
@@ -61,7 +66,21 @@
             </div>
         </div>
     </div>
+</main>
 
+<footer>
+    <div class="footerlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="support.html">support</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+    </div>
+    <div class="footerCR">
+        <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
+    </div>
+</footer>
     <script src="../static/js/script.js"></script>
     <!-- Will change the placeholder stuff to the actial game details from the ip fetched from localstrage, -->
     <script src="../static/js/gameDetails.js"></script> 
