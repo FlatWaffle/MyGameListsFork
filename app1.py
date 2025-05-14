@@ -7,9 +7,9 @@ app.secret_key = 'skibidisecretkey'
 # Database connection
 def get_db_connection(): 
     return pymysql.connect(
-        host='10.2.3.56', 
-        user='root', 
-        password='magnum asinum', 
+        host='10.2.3.93', 
+        user='mgl_user',  # User, gave it only neccesairy perms in mariadb
+        password='123',
         database='mygamelistsdb'
     )
 
