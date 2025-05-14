@@ -60,7 +60,7 @@ def login():
 
 @app.route('/logout') # When someone visits the logout url they are logged out and sent to the index page
 def logout():
-    session.clear() # Clear the session
+    session.clear() # Clear the session / Logs you out
     return redirect(url_for('index'))
 
 @app.route('/game-details')
