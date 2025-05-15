@@ -6,6 +6,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 # Table of contents 
 - [📝Develpment progress](#develpment-progress)
 - [📚Guides](#guides)
+- [🤝 Contributing](#contributing)
 
 # 📝Develpment progress 
 
@@ -33,3 +34,48 @@ By law this website is designed to follow the universal design principles of Nor
 
 ---
 
+# 🤝 How to contribute
+I welcome contributions to MyGameList, if you're interested in helping, here's how you can get started:
+
+## 1. Clone
+Clone the repository to your local machine:
+```
+# Clone the main repository
+git clone https://github.com/ByteOfWaffle/MyGameLists.git
+```
+Or clone by downloading the project as ZIP here:![Exaple image](image.png)
+
+2. Install dependencies
+```
+# Install dependencies
+pip install -r requirements.txt
+```
+### 3. Making Contributions
+1. Create a new branch for your feature:
+```bash
+git checkout -b NameOfYourFeature
+```
+
+2. Make your changes and commit them:
+```bash
+# Stage all changes
+git add .
+# Commit staged changes with a message/description
+git commit -m "Description of your changes"
+```
+
+3. Push to your branch:
+```bash
+git push origin feature/your-feature-name
+```
+
+4. Create a Pull Request through GitHub
+
+### Contribution Guidelines
+- Follow the existing code style
+- Test your changes thoroughly
+- Update documentation if you're adding new features
+- Create issues for major changes and enhancements
+We appreciate your interest in making MyGameList better!
+
+---
