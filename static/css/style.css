@@ -111,7 +111,22 @@ footer{
     gap: 20px;
 }
 .sidebarGD {
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    min-width: 180px;
+    box-shadow: 0 2px 8px #0001;
+}
+.sidebarGD img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
 }
 .main-contentGD {
     flex: 1;
@@ -135,6 +150,24 @@ select {
     padding: 5px;
     width: 100%;
     margin-bottom: 10px;
+}
+.sidebarGD select, .sidebarGD button {
+    width: 120px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.sidebarGD button {
+    background: #643EBB;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.sidebarGD button:hover {
+    background: #4a1d96;
 }
 
 /* Makes cards interactable */
