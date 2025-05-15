@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk 2077</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Game Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <!-- header -->
 <header>
     <div class="header_container">
-        <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
+        <img src="{{ url_for('static', filename='Images/MGL_Logo.svg') }}" alt="MyGameLists Logo">
         <a href="{{ url_for('index') }}">Home</a>
         {% if session.get('logged_in') %}
+            <a href="{{ url_for('list') }}">My List</a>
             <span>In Session ({{ session.get('username') }})</span>
             <a href="{{ url_for('logout') }}">Logout</a>
         {% else %}
@@ -26,25 +27,40 @@
 <body>
     <!-- Header -->
     <div class="headerGD">
-        <h1 id = "GDname">API error</h1>
-  </div>
+        <h1 id="GDname">Loading game details...</h1>
+    </div>
 
     <div class="containerGD">
         <!-- Sidebar -->
         <div class="sidebarGD">
             <div class="card">
-                <img id="GDimage" src="https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg" alt="Cyberpunk 2077">
+                <img id="GDimage" src="https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg" alt="Game image">
                 <!-- game status -->
-                <select>
-                    <option selected>Game status</option>
-                    <option>Playing</option>
-                    <option>Plan to Play</option>
-                    <option>Finished</option>
-                    <option>Dropped</option>
-                    <option>On Hold</option>
+                <select id="gameStatus">
+                    <option value="Game status" selected disabled>Game status</option>
+                    <option value="Playing">Playing</option>
+                    <option value="Plan to Play">Plan to Play</option>
+                    <option value="Finished">Finished</option>
+                    <option value="Dropped">Dropped</option>
+                    <option value="On Hold">On Hold</option>
                 </select>
                 
-                <button>Add to List</button>
+                <!-- game score -->
+                <select id="gameScore">
+                    <option value="0" selected disabled>Score</option>
+                    <option value="10">10 - Masterpiece</option>
+                    <option value="9">9 - Great</option>
+                    <option value="8">8 - Very Good</option>
+                    <option value="7">7 - Good</option>
+                    <option value="6">6 - Fine</option>
+                    <option value="5">5 - Average</option>
+                    <option value="4">4 - Bad</option>
+                    <option value="3">3 - Very Bad</option>
+                    <option value="2">2 - Horrible</option>
+                    <option value="1">1 - Appalling</option>
+                </select>
+                
+                <button id="addToListBtn">Add to List</button>
             </div>
         </div>
         <main>
@@ -52,37 +68,36 @@
         <div class="main-contentGD">
             
             <div class="card">
-                <div id="score">Score: 8.4</div>
-                <div id="ranking">Ranked: #327</div>
-                <div id="released">Released: December 2020</div>
-                <div id="genre">Genre: Action RPG</div>
-                <div id="developer">Developed by:</div>
+                <div id="score">Loading...</div>
+                <div id="ranking">Loading...</div>
+                <div id="released">Released: Loading...</div>
+                <div id="genre">Genre: Loading...</div>
+                <div id="developer">Developed by: Loading...</div>
             </div>
             
             <!-- Synopsis -->
             <div class="card">
                 <h3 id="GDsummary">Summary</h3>
-                <p id = "GDsummarytext">If this page persists, there has been an error fetching api content.</p>
+                <p id="GDsummarytext">Loading game summary...</p>
             </div>
         </div>
     </div>
 </main>
 
 <footer>
-        <div class="footerlinks">
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('about') }}">About</a>
-            <a href="{{ url_for('support') }}">Support</a>
-            <a href="{{ url_for('terms') }}">Terms</a>
-            <a href="{{ url_for('privacy') }}">Privacy</a>
-            <a href="{{ url_for('cookies') }}">Cookies</a>
-        </div>
-        <div class="footerCR">
-            <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="../static/js/script.js"></script>
-    <!-- Will change the placeholder stuff to the actial game details from the ip fetched from localstrage, -->
-    <script src="../static/js/gameDetails.js"></script> 
+    <div class="footerlinks">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('support') }}">Support</a>
+        <a href="{{ url_for('terms') }}">Terms</a>
+        <a href="{{ url_for('privacy') }}">Privacy</a>
+        <a href="{{ url_for('cookies') }}">Cookies</a>
+    </div>
+    <div class="footerCR">
+        <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/gameDetails.js') }}"></script> 
 </body>
 </html>

@@ -15,6 +15,7 @@
         <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
         <a href="{{ url_for('index') }}">Home</a>
         {% if session.get('logged_in') %}
+            <a href="{{ url_for('list') }}">My List</a>
             <span>In Session ({{ session.get('username') }})</span>
             <a href="{{ url_for('logout') }}">Logout</a>
         {% else %}
