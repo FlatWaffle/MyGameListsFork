@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <!-- header -->
+    <header>
+        <div class="header_container">
+            <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if session.get('logged_in') %}
+                <span>In Session ({{ session.get('username') }})</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <span>Out of Session</span>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </div>
+    </header>
+
     <div class="form-container">
         <h1>Register</h1>
         <form action="{{ url_for('register') }}" method="POST">
@@ -21,6 +37,21 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
+    <footer>
+        <div class="footerlinks">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('support') }}">Support</a>
+            <a href="{{ url_for('terms') }}">Terms</a>
+            <a href="{{ url_for('privacy') }}">Privacy</a>
+            <a href="{{ url_for('cookies') }}">Cookies</a>
+        </div>
+        <div class="footerCR">
+            <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
+        </div>
+    </footer>
+    
     <script src="../static/js/script.js"></script>
 </body>
 </html>

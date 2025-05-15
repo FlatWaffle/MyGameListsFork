@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your list</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-<header>
-    <div class="header_container">
-        <h1 id="Hlogo">LOGO HERE</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-    </div>
-</header>
+    <!-- header -->
+    <header>
+        <div class="header_container">
+            <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if session.get('logged_in') %}
+                <span>In Session ({{ session.get('username') }})</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <span>Out of Session</span>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </div>
+    </header>
 
-<main>
+    <main>
+        <!-- Your list content here -->
+    </main>
 
-</main>
-
-
+    <footer>
+        <div class="footerlinks">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('support') }}">Support</a>
+            <a href="{{ url_for('terms') }}">Terms</a>
+            <a href="{{ url_for('privacy') }}">Privacy</a>
+            <a href="{{ url_for('cookies') }}">Cookies</a>
+        </div>
+        <div class="footerCR">
+            <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
