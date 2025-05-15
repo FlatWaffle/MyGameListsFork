@@ -43,7 +43,8 @@ Clone the repository to your local machine:
 # Clone the main repository
 git clone https://github.com/ByteOfWaffle/MyGameLists.git
 ```
-Or clone by downloading the project as ZIP here:![Exaple image](image.png)
+Or clone by downloading the project as ZIP here:<img width="904" alt="image" src="https://github.com/user-attachments/assets/582e567c-d52f-4688-a6f2-8328bf159226" />
+
 
 2. Install dependencies
 ```
