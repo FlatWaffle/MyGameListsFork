@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MyGameLists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <img src="../static/Images/MGL_Logo.svg" alt="MyGameLists Logo">
+            <a href="{{ url_for('index') }}">Home</a>
+            {% if session.get('logged_in') %}
+                <span>In Session ({{ session.get('username') }})</span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <span>Out of Session</span>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
+        </div>
+    </header>
+
+    <main>
+        <h1>Privacy Policy</h1>
+        <div class="content">
+            <p>We collect:</p>
+            <ul>
+                <li>Usernames</li>
+                <li>Passwords</li>
+                <li>Game ratings and reviews you submit</li>
+            </ul>
+
+            <p>Data is stored in a local MariaDB database and is only used for demonstration purposes.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerlinks">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('support') }}">Support</a>
+            <a href="{{ url_for('terms') }}">Terms</a>
+            <a href="{{ url_for('privacy') }}">Privacy</a>
+            <a href="{{ url_for('cookies') }}">Cookies</a>
+        </div>
+        <div class="footerCR">
+            <p>MyGameLists is a property of MyGameLists Co., Ltd. ©2025 All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

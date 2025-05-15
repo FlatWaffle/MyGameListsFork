@@ -32,21 +32,4 @@ By law this website is designed to follow the universal design principles of Nor
 - Color contrast are all at wecag AAA level tested through [WebAIM](https://webaim.org/resources/contrastchecker/)
 
 ---
-# 📚Guides 
-(These features are not implemented yet this is just a guide on how to use the website in when functionality is added)
-## How to add a game to the list
-- Press on one of the games in the list
-- Choose game status
-- Press "Add to list"
 
-## How to create an account
-- Go to the register page
-- Fill in the form
-- Press "Register"
-
-## How to log in
-- Go to the login page
-- Fill in the form
-- Press "Login"
----
-# 
