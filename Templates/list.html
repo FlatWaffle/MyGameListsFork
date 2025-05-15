@@ -24,7 +24,23 @@
     </header>
 
     <main>
-        <!-- Your list content here -->
+        <h1>Your List</h1>
+        <div class="list_container">
+            {% if games %}
+                <ul>
+                    {% for game in games %}
+                        <li>
+                            <img src="{{ game.image_url }}" alt="{{ game.name }}">
+                            <h2>{{ game.name }}</h2>
+                            <p>Rating: {{ game.rating }}</p>
+                            <p>Review: {{ game.review }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No games in your list.</p>
+            {% endif %}
+        </div>
     </main>
 
     <footer>
