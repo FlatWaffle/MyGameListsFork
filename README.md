@@ -24,7 +24,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 - Raspberry Pi Mariadb database ✅
 - Make user account creator✅
 - Login sessions✅
-- Save games to userlist.❌
+- Save games to userlist.✅
 ## Prio2
 - Host the database on Virtual Machine✅
 
