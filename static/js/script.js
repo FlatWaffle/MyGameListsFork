@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Loop through games in api response
                 data.results.forEach(game => {
                     // Add game to grid and uses placeholder image if no image is available, also adds onclick event on the game card to show details using the game id.
-                    gridContainer.innerHTML += `<div class="game-card" onclick="ShowGameDetails(${game.id})"><img src="${game.background_image || 'https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}"><h3>${game.name}</h3></div>`;
+                    gridContainer.innerHTML += `
+                        <div class="game-card" onclick="ShowGameDetails(${game.id})" role="button" aria-label="View details for ${game.name}">
+                            <img src="${game.background_image || 'https://images.pexels.com/photos/8058392/pexels-photo-8058392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}">
+                            <h3>${game.name}</h3>
+                        </div>`;
                 });
             });
     }
