@@ -48,7 +48,6 @@ git clone https://github.com/ByteOfWaffle/MyGameLists.git
 ```
 Or clone by downloading the project as ZIP here:<img width="904" alt="image" src="https://github.com/user-attachments/assets/582e567c-d52f-4688-a6f2-8328bf159226" />
 
-
 2. Install dependencies
 ```
 # Install dependencies
@@ -61,13 +60,25 @@ pip install -r requirements.txt
 - The SQL used for the database and tables are in the project folder as "database.sql"
 
 2. Listen to all networks 
-⚠️This may be different on different Linux distros.
+⚠️This may be different on different Linux distros.⚠️
 - Open your terminal and write: sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 - In here change the bind-address to 0.0.0.0
 - It should look like this
-```bind-address = 0.0.0.0```
+```bash
+bind-address = 0.0.0.0
+```
 
-### 3. Making Contributions
+3. Open ports
+- Open port 8080, this is the port waitress uses to access the database.
+Note: If you are planning on running the static on apache you might wanna enable port 80 as well.
+```bash
+sudo ufw allow 8080
+```
+
+4. Change ip on python file
+- In the app1.py file change the host ip to mach the one of your database.
+
+## 3. Making Contributions
 1. Create a new branch for your feature:
 ```bash
 git checkout -b NameOfYourFeature
