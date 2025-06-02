@@ -5,8 +5,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 ---
 # Table of contents 
 - [📝Develpment progress](#develpment-progress)
-- [📚Guides](#guides)
-- [🤝 Contributing](#contributing)
+- [🤝 Contributing](#🤝How-to-contribute)
 
 # 📝Develpment progress 
 
