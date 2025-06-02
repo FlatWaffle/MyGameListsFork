@@ -4,8 +4,11 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 
 ---
 # Table of contents 
-- [📝Develpment progress](#develpment-progress)
-- [🤝 Contributing](#How-to-contribute)
+- [📝 Development Progress](#-development-progress)
+- [🧩 Planned Features](#planned-features-️)
+- [🚧 Current MVP Progress](#current-mvp-progress)
+- [⚖️ Legal guidelines](#Legal-guidelines)
+- [🤝 How to Contribute](#privacy-policy)
 
 # 📝Develpment progress 
 
@@ -26,7 +29,7 @@ A website inspired by [MyAnimeList](https://myanimelist.net), where users can cr
 - Save games to userlist.✅
 ## Prio2
 - Host the database on Virtual Machine✅
-
+# Legal guidelines
 ## Universal design
 By law this website is designed to follow the universal design principles of Norway [§ 18](https://lovdata.no/lov/2017-06-16-51/§18)
 - Color contrast are all at wecag AAA level tested through [WebAIM](https://webaim.org/resources/contrastchecker/)
