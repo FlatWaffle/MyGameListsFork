@@ -41,7 +41,7 @@ By law this website is designed to follow the universal design principles of Nor
 I welcome contributions to MyGameList, if you're interested in helping, here's how you can get started:
 
 ## 1. Clone
-Clone the repository to your local machine:
+1. Clone the repository to your local machine:
 ```
 # Clone the main repository
 git clone https://github.com/ByteOfWaffle/MyGameLists.git
@@ -54,6 +54,12 @@ Or clone by downloading the project as ZIP here:<img width="904" alt="image" src
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+## 2. Set up MariaDB database.
+You can do this in whichever way you prefer i hosted it on from Ubuntu on a virtual machine for my project.
+The SQL used for the database and tables are in the project folder as "database.sql"
+
+
 ### 3. Making Contributions
 1. Create a new branch for your feature:
 ```bash
