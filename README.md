@@ -56,9 +56,16 @@ pip install -r requirements.txt
 ```
 
 ## 2. Set up MariaDB database.
-You can do this in whichever way you prefer i hosted it on from Ubuntu on a virtual machine for my project.
-The SQL used for the database and tables are in the project folder as "database.sql"
+1. Set up the database and tables
+- You can do this in whichever way you prefer i hosted it on from Ubuntu on a virtual machine for my project.
+- The SQL used for the database and tables are in the project folder as "database.sql"
 
+2. Listen to all networks 
+⚠️This may be different on different Linux distros.
+- Open your terminal and write: sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+- In here change the bind-address to 0.0.0.0
+- It should look like this
+```bind-address = 0.0.0.0```
 
 ### 3. Making Contributions
 1. Create a new branch for your feature:
