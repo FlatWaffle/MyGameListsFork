@@ -2,6 +2,7 @@
 
 A website inspired by [MyAnimeList](https://myanimelist.net), where users can create and share lists of games they've played. The platform collects user ratings together to provide global scores for each game. Users will also be able to make reviews for games in their lists.
 ![image](https://github.com/user-attachments/assets/5e61558e-d315-4023-a7dc-22d9420a50cf)
+![image](https://github.com/user-attachments/assets/b73b73ab-b8c4-4a7b-b0ae-0aa999320785)
 
 ---
 # Table of contents 
